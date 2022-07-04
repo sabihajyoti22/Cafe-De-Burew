@@ -14,13 +14,13 @@ a{
 .my-header1{
     height: 100vh;
     background-size: cover;
-    background-image:url('../../Image/BackgroundImage.jpeg');
+    background-image:url('../../Image/BgImage.jpeg');
     background-attachment: fixed;
 }
 .my-header{
     height: 100vh;
     background-size: cover;
-    background-image:url('../../Image/BackgroundImage.jpeg');
+    background-image:url('../../Image/BgImage.jpeg');
 }
 .rectangle{
     height: 100vh;
