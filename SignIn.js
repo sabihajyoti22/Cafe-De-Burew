@@ -37,6 +37,6 @@ signInForm.addEventListener("submit",(e)=>{
         passwordInput.value=""
         rePasswordInput.value=""
         localStorage.setItem("Users",JSON.stringify(users));
-        window.location.replace("./index.html")
+        window.location.replace("/")
     }
 })
