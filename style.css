@@ -28,7 +28,17 @@ a{
     color: white;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-
+.eye{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+.eye .hide2{
+    display: none;
+}
+.eye .hide2{
+    display: none;
+}
 .my-icon{
     position: relative;
     font-size: 25px;
@@ -277,17 +287,7 @@ legend{
 #signInPassword{
     position: relative;
 }
-.eye{
-    position: absolute;
-    top: 5px;
-    right: 10px;
-}
-.eye .hide2{
-    display: none;
-}
-.eye .hide2{
-    display: none;
-}
+
 .my-form p{
     display: none;
 }

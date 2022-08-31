@@ -37,6 +37,6 @@ signInForm.addEventListener("submit",(e)=>{
         passwordInput.value=""
         rePasswordInput.value=""
         localStorage.setItem("Users",JSON.stringify(users));
-        window.location.replace("/")
+        window.location.replace("https://sabihajyoti22.github.io/Cafe-De-Burew/")
     }
 })
