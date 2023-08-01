@@ -8,7 +8,7 @@ const logInName = document.querySelector("#navbarDropdown");
 const signInToggle = document.querySelector(".siginToggle")
 const logOutToggle = document.querySelector(".logoutToggle")
 var modalElement = null
-var flag = false;
+var flag = 0;
 let lastName = ""
 var id = ""
 
@@ -72,8 +72,9 @@ logInForm.addEventListener("submit",(e) => {
     }       
 })
 
-// Login
-if(sessionStorage.key(1)){
+// sessionStorage.length === 2 ? flag = 1 : flag = 0
+console.log(sessionStorage.key(0))
+if(sessionStorage.key(0)){
     logInName.style.padding = "35px";
     logInName.innerHTML = sessionStorage.getItem(sessionStorage.key(1));
     
