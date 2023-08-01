@@ -137,18 +137,18 @@ const cartInsert = (e,price)=>{
 
 // Cart value changing
 coffeeButton1.addEventListener("click",(e)=>{
-    if(sessionStorage.key(1)){
+    if(sessionStorage.key(0)){
         cartInsert(e,"5")
     }
 })
 coffeeButton2.addEventListener("click",(e)=>{
-    if(sessionStorage.key(1)){
+    if(sessionStorage.key(0)){
         cartInsert(e,"10")
         // window.location.reload();
     }
 })
 coffeeButton3.addEventListener("click",(e)=>{
-    if(sessionStorage.key(1)){
+    if(sessionStorage.key(0)){
         cartInsert(e,"15")
         // window.location.reload();
     }
