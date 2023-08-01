@@ -12,7 +12,7 @@ var flag = false;
 let lastName = ""
 var id = ""
 
-const createModal = (name, icon, color)=>{
+const createModal = (name, icon, color) => {
     modalElement = document.createElement("div");
     modalElement.innerHTML = `
             <div class="modal" tabindex="-1">
@@ -31,9 +31,9 @@ const createModal = (name, icon, color)=>{
                 </div>
             </div>
             </div>
-            </div>`;
-    document.body.append(modalElement);
-    var modal = new bootstrap.Modal(modalElement.querySelector(".modal"));
+            </div>`
+    document.body.append(modalElement)
+    var modal = new bootstrap.Modal(modalElement.querySelector(".modal"))
     modal.show()
 }
 
@@ -41,47 +41,35 @@ const createModal = (name, icon, color)=>{
 const hideFunction = (e)=>{
     if(passwordInput.type == "password"){
         passwordInput.type = "text"
-        hidePassword1.style.display = "none";
-        hidePassword2.style.display = "block";
-        hidePassword2.style.marginTop ="5px";
+        hidePassword1.style.display = "none"
+        hidePassword2.style.display = "block"
+        hidePassword2.style.marginTop ="5px"
     }
     else{
         passwordInput.type = "password"
-        hidePassword1.style.display = "block";
-        hidePassword1.style.marginTop ="5px";
+        hidePassword1.style.display = "block"
+        hidePassword1.style.marginTop ="5px"
         hidePassword2.style.display = "none" 
     }
 }
-passwordIcon.addEventListener("click",hideFunction)
+passwordIcon.addEventListener("click", hideFunction)
 
 // Sign in Auhentication
 const users = localStorage.getItem("Users") ? JSON.parse(localStorage.getItem("Users")) : [];
 
-logInForm.addEventListener("submit",(e)=>{
+logInForm.addEventListener("submit",(e) => {
     e.preventDefault()
-    const email = emailInput.value;
-    const password = passwordInput.value;
     
-    users.map((user)=>{
-        if(email === user.email && password === user.password){
-            flag = true;
-            id = user.id;
-            lastName = user.lastName;
-            sessionStorage.setItem(id,lastName)
-        }
-    })
-
-    if(modalElement !== null){
-        modalElement.remove();
-    }
-    if(flag){
-            emailInput.value = ""
-            passwordInput.value = ""
-            window.location.reload()
-            
+    const authUser = users.find((el) => el.email === emailInput.value && el.password === passwordInput.value)
+    
+    if(authUser){
+        emailInput.value = ""
+        passwordInput.value = ""
+        sessionStorage.setItem(authUser.id, authUser.lastName)
+        window.location.reload()
     }else{
         createModal("Didn't find your Account","fa-solid fa-circle-xmark","danger")
-    }
+    }       
 })
 
 // Login
@@ -102,14 +90,14 @@ logOutToggle.addEventListener("click",()=>{
 })
 
 // Setting Popover
-if(!sessionStorage.key(1)){
-   $(function(){
-    $('[data-bs-toggle="popover"]').popover({
-        title: "Can't order now!!!",
-        content: "Please, log in first"
-    })
-   })
-   $('.popover-dismiss', {
-        trigger: 'focus'
-    })
-}
+// if(!sessionStorage.key(1)){
+//    $(function(){
+//     $('[data-bs-toggle="popover"]').popover({
+//         title: "Can't order now!!!",
+//         content: "Please, log in first"
+//     })
+//    })
+//    $('.popover-dismiss', {
+//         trigger: 'focus'
+//     })
+// }

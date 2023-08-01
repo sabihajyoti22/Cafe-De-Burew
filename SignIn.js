@@ -29,7 +29,6 @@ signInForm.addEventListener("submit",(e)=>{
             password: passwordInput.value
         }
         const users = localStorage.getItem("Users") ? JSON.parse(localStorage.getItem("Users")) : []
-        console.log(users)
         users.push(user)
         firstName.value=""
         lastName.value=""
@@ -37,6 +36,6 @@ signInForm.addEventListener("submit",(e)=>{
         passwordInput.value=""
         rePasswordInput.value=""
         localStorage.setItem("Users",JSON.stringify(users));
-        window.location.replace("https://sabihajyoti22.github.io/Cafe-De-Burew/")
+        window.location.replace("/")
     }
 })
