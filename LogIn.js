@@ -91,14 +91,14 @@ logOutToggle.addEventListener("click",()=>{
 })
 
 // Setting Popover
-// if(!sessionStorage.key(1)){
-//    $(function(){
-//     $('[data-bs-toggle="popover"]').popover({
-//         title: "Can't order now!!!",
-//         content: "Please, log in first"
-//     })
-//    })
-//    $('.popover-dismiss', {
-//         trigger: 'focus'
-//     })
-// }
+if(!sessionStorage.key(0)){
+   $(function(){
+    $('[data-bs-toggle="popover"]').popover({
+        title: "Can't order now!!!",
+        content: "Please, log in first"
+    })
+   })
+   $('.popover-dismiss', {
+        trigger: 'focus'
+    })
+}
