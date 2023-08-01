@@ -61,7 +61,7 @@ logInForm.addEventListener("submit",(e) => {
     e.preventDefault()
     
     const authUser = users.find((el) => el.email === emailInput.value && el.password === passwordInput.value)
-    
+    console.log(authUser)
     if(authUser){
         emailInput.value = ""
         passwordInput.value = ""
