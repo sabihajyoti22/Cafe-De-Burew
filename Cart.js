@@ -18,7 +18,6 @@ const cartLoadData = ()=>{
     return localStorage.getItem("Orders") ? JSON.parse(localStorage.getItem("Orders")) : []
 }
 
-
 const createOrder = (orderId,orderName,orderPrice)=>{
     // console.log(e.target.value)
     var price = orderPrice
