@@ -76,7 +76,7 @@ logInForm.addEventListener("submit",(e) => {
 console.log(sessionStorage.key(0))
 if(sessionStorage.key(0)){
     logInName.style.padding = "35px";
-    logInName.innerHTML = sessionStorage.getItem(sessionStorage.key(1));
+    logInName.innerHTML = sessionStorage.getItem(sessionStorage.key(0));
     
     // SignIn && LogOut Toggler
     signInToggle.style.display="none"
@@ -85,7 +85,7 @@ if(sessionStorage.key(0)){
 
 // Logout
 logOutToggle.addEventListener("click",()=>{
-    sessionStorage.removeItem(sessionStorage.key(1))
+    sessionStorage.removeItem(sessionStorage.key(0))
     localStorage.removeItem("Orders");
     window.location.reload()
 })
